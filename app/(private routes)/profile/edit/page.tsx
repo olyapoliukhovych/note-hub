@@ -64,7 +64,9 @@ export default function EditProfilePage() {
             <label htmlFor="username">Username:</label>
             <input
               id="username"
+              name="username"
               type="text"
+              autoComplete="on"
               className={css.input}
               value={username}
               onChange={(e) => setUsername(e.target.value)}

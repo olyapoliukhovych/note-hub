@@ -14,6 +14,7 @@ export default function SearchBox({ value, onChange }: SearchBoxProps) {
       value={value}
       id="search"
       name="search"
+      autoComplete="off"
       onChange={(e) => onChange(e.target.value)}
     />
   );

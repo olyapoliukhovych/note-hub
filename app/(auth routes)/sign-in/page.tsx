@@ -34,8 +34,9 @@ const SignIn = () => {
           <label htmlFor="email">Email</label>
           <input
             id="email"
-            type="email"
             name="email"
+            type="email"
+            autoComplete="on"
             className={css.input}
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             required
@@ -46,8 +47,9 @@ const SignIn = () => {
           <label htmlFor="password">Password</label>
           <input
             id="password"
-            type="password"
             name="password"
+            type="password"
+            autoComplete="off"
             className={css.input}
             minLength={8}
             required

@@ -57,6 +57,8 @@ export default function NoteForm({ tags }: NoteFormProps) {
         Title
         <input
           name="title"
+          id="title"
+          autoComplete="off"
           onChange={handleChange}
           defaultValue={draft?.title}
           placeholder="Title"
