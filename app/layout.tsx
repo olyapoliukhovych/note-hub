@@ -96,10 +96,10 @@ export default function RootLayout({
         <TanStackProvider>
           <AuthProvider>
             <Header />
-            {/* <main> */}
+
             {children}
             {modal}
-            {/* </main> */}
+
             <Footer />
           </AuthProvider>
         </TanStackProvider>

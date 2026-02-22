@@ -43,10 +43,8 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  /* overflow: auto; */
   scrollbar-color: rgb(85, 12, 114) transparent;
   scrollbar-width: thin;
-  /* scroll-behavior: smooth; */
   padding-right: 8px;
 }
 
