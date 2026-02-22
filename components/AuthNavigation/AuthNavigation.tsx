@@ -37,7 +37,7 @@ export default function AuthNavigation() {
     <>
       {isAuthenticated ? (
         <>
-          <li>
+          <li className={css.hideHome}>
             <Link
               href="/"
               prefetch={false}
@@ -65,7 +65,6 @@ export default function AuthNavigation() {
             </Link>
           </li>
           <li className={css.navigationItem}>
-            <p className={css.userEmail}>User email: {user?.email}</p>
             <button onClick={handleLogout} className={css.logoutButton}>
               Logout
             </button>

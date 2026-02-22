@@ -60,7 +60,7 @@ export default function RootLayout({
   modal: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body className={roboto.variable}>
         <NextTopLoader color="#fde3c9" showSpinner={false} />
         <Toaster
@@ -68,21 +68,27 @@ export default function RootLayout({
           toastOptions={{
             duration: 3000,
             style: {
-              color: "#333",
+              color: "#fff",
               borderRadius: "10px",
             },
             success: {
               duration: 3000,
+              style: {
+                backgroundColor: "#056237",
+              },
               iconTheme: {
-                primary: "#056237",
-                secondary: "#fff",
+                primary: "#fff",
+                secondary: "#056237",
               },
             },
             error: {
               duration: 3000,
+              style: {
+                backgroundColor: "#dc3545",
+              },
               iconTheme: {
-                primary: "#dc3545",
-                secondary: "#fff",
+                primary: "#fff",
+                secondary: "#dc3545",
               },
             },
           }}
@@ -90,10 +96,10 @@ export default function RootLayout({
         <TanStackProvider>
           <AuthProvider>
             <Header />
-            <main>
-              {children}
-              {modal}
-            </main>
+            {/* <main> */}
+            {children}
+            {modal}
+            {/* </main> */}
             <Footer />
           </AuthProvider>
         </TanStackProvider>

@@ -1,25 +1,40 @@
-.main {
+/* .main {
   flex: 1;
-}
+} */
 
 .container {
-  width: 90%;
-  max-width: 1280px;
-  margin: 0px auto;
-  padding: 0 16px 16px;
+  width: 80vw;
+  padding: 50px 0 50px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 768px) {
+    width: 60vw;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    width: 50vw;
+    max-width: 1280px;
+    padding: 115px 0 115px;
+  }
 }
 
 .title {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 500;
   color: #1a1a1a;
-  margin-bottom: 60px;
+  margin-top: 0;
+  margin-bottom: 16px;
   text-align: center;
+
+  @media only screen and (min-width: 1440px) {
+    font-size: 36px;
+    font-weight: 700;
+  }
 }
 
 .description {
   font-size: 18px;
-  color: #444444;
+  color: #444;
   line-height: 28px;
   margin-bottom: 16px;
 }

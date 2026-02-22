@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  padding: 24px;
+  padding: 24px 0;
 }
 
 .item {
@@ -19,8 +19,12 @@
 
 .header h2 {
   margin: 0;
-  font-size: 28px;
+  font-size: 22px;
   color: #333;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 28px;
+  }
 }
 
 .content {
@@ -91,10 +95,14 @@
   background-color: white;
   padding: 30px;
   border-radius: 8px;
-  max-width: 500px;
+  max-width: 300px;
   width: 90%;
   position: relative;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+  @media only screen and (min-width: 768px) {
+    max-width: 500px;
+  }
 }
 
 .loaderContainer,

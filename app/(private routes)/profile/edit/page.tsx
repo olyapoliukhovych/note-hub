@@ -7,6 +7,7 @@ import { useAuthStore } from "@/lib/store/authStore";
 import { updateMe } from "@/lib/api/clientApi";
 import css from "./EditProfilePage.module.css";
 import { Spinner } from "@/components/Spinner/Spinner";
+import toast from "react-hot-toast";
 
 export default function EditProfilePage() {
   const router = useRouter();
@@ -31,8 +32,10 @@ export default function EditProfilePage() {
       router.push("/profile");
     } catch (error) {
       console.error("Failed to update profile", error);
+      toast.error("Failed to update profile");
     } finally {
       setIsSubmitting(false);
+      toast.success("Profile updated successfully");
     }
   };
 

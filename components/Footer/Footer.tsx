@@ -1,5 +1,5 @@
-import css from '@/components/Footer/Footer.module.css';
-import Link from 'next/link';
+import css from "@/components/Footer/Footer.module.css";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -11,7 +11,9 @@ export default function Footer() {
           <p>
             Contact me:
             <span className={css.emailSpan}>
-              <Link href="mailto:olha.poliukhovych.1@gmail.com">olha.poliukhovych.1@gmail.com</Link>
+              <Link href="mailto:olha.poliukhovych.1@gmail.com">
+                olha.poliukhovych.1@gmail.com
+              </Link>
             </span>
           </p>
         </div>

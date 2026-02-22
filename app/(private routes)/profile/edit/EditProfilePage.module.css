@@ -1,5 +1,5 @@
 .mainContent {
-  flex: 1;
+  /* flex: 1; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,12 +17,17 @@
 }
 
 .formTitle {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: 500;
   color: #1a1a1a;
   margin-top: 0;
   margin-bottom: 24px;
   text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 32px;
+    font-weight: 700;
+  }
 }
 
 .avatar {
@@ -61,10 +66,6 @@
   color: #333;
 }
 
-.input:hover {
-  border-color: #550c72;
-}
-
 .input:focus-within {
   outline-color: #550c72;
 }
@@ -91,6 +92,10 @@
 .saveButton:focus,
 .saveButton:active {
   background-color: #2a003a;
+}
+
+.saveButton:disabled {
+  cursor: not-allowed;
 }
 
 .cancelButton {

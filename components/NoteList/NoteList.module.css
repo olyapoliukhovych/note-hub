@@ -24,7 +24,7 @@
 
 .listItem:hover {
   transform: scale(1.01);
-  box-shadow: 0px 0px 18px 2px rgba(85, 12, 114, 0.5);
+  box-shadow: 0px 0px 18px 1px rgba(85, 12, 114, 0.5);
 }
 
 .title {
@@ -43,10 +43,10 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  overflow: auto;
+  /* overflow: auto; */
   scrollbar-color: rgb(85, 12, 114) transparent;
   scrollbar-width: thin;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   padding-right: 8px;
 }
 
