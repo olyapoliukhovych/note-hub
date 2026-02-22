@@ -1,45 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with
-[`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Note Manager – Next.js Application
 
-## Getting Started
+A high-performance personal note management system built with **Next.js 16 (App Router)** and **React 19**. This project focuses on seamless data synchronization, robust state management, and a smooth user experience.
 
-First, run the development server:
+## 🚀 Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* **Full CRUD Functionality**: Create, read, update, and delete notes with instant UI feedback.
+* **Advanced Data Fetching**: Powered by **TanStack Query v5** for caching, background updates, and optimistic UI.
+* **Authentication**: Secure session-based auth using cookies and Axios.
+* **Dynamic Search & Filtering**: Optimized search using **debounce** to reduce API load and pagination for performance.
+* **Global State**: Lightweight state management via **Zustand**.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the
-file.
+| Category | Technology |
+| --- | --- |
+| **Framework** | Next.js 16 (App Router), React 19 |
+| **Styling** | CSS Modules |
+| **Data Fetching** | TanStack Query v5, Axios |
+| **State Management** | Zustand |
+| **Utilities** | React Hot Toast, React Paginate, Use-Debounce |
 
-This project uses
-[`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to
-automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏗 Architectural Highlights
 
-## Learn More
+### **1. Secure Server-Side Integration**
 
-To learn more about Next.js, take a look at the following resources:
+The project uses a dual API approach:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **`clientApi.ts`**: For client-side interactions, utilizing Axios for global error handling and toast notifications.
+* **`serverApi.ts`**: For server-side session validation to protect routes and fetch data before the page renders.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback
-and contributions are welcome!
+### **2. Efficient State Synchronization**
 
-## Deploy on Vercel
+By integrating **TanStack Query**, the app minimizes network requests through smart caching. It handles complex server states (loading, error, success) globally via a centralized `TanStackProvider`.
 
-The easiest way to deploy your Next.js app is to use the
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-from the creators of Next.js.
+### **3. Optimized UX**
 
-Check out our
-[Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying)
-for more details.
+* **Scroll Management**: Custom modal implementation that locks body scroll to prevent "double scroll" issues.
+* **Navigation**: Integrated `nextjs-toploader` to provide visual feedback during route changes.
